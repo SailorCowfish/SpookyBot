@@ -89,7 +89,7 @@ async def bot_suggest(ctx, *title):
 async def bot_movieList(ctx):
     response = ""
     for index,movie in enumerate(movieList.movies):
-        response = f'{response}\n{index} - {movie["title"]}'
+        response = f'{response}\nMovieID: {index} - Title: {movie["title"]}'
     await ctx.send(response)
 
 #Show the list of movies and their votes
