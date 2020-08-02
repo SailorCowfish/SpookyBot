@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import Polls
 import movies
 import os
@@ -10,10 +11,24 @@ from discord.ext import commands
 
 logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
 
-TOKEN = ''
-GUILD = ''
 pollFile = 'currentpoll.yaml'
 movieFile = 'movielist.yaml'
+configFile = 'botconfig.yaml'
+
+required_configs = [ "bot_discord_token", "guild" ]
+if os.path.exists(configFile):
+    botConfig = storage.load(configFile)
+else:
+    logging.crit("Unable to find config file, please create %s as described in the README", configFile)
+    sys.exit(1)
+
+for entry in required_configs:
+    if entry not in botConfig:
+        logging.crit("Required config entry %s not found in configuration.", entry)
+        sys.exit(1)
+
+TOKEN = botConfig['bot_discord_token']
+GUILD = botConfig['guild']
 
 if os.path.exists(pollFile):
 	#Code to read file and save it as "pollData"
