@@ -9,7 +9,7 @@ import logging
 
 from discord.ext import commands
 
-logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
+logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
 
 pollFile = 'currentpoll.yaml'
 movieFile = 'movielist.yaml'
