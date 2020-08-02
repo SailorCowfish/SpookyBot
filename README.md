@@ -8,9 +8,22 @@ SpookyBot requires yaml and discord to function. Those can be installed with:
 
 `pip -r requirements.text`
 
+You will need to use the botconfig.yaml file to store the bot token that was issued from discord as well as your guild ID.
+
+```yaml
+bot_discord_token:[your token here]
+guild:[your guild ID here]
+```
+
 ## Development Notes
 References to "ID" should be in all caps.
+
+Use camel casing.
+
+Update the !help function to reflect any new commands added.
+
 The Bot handles interactions with the file system.
+
 "Polls" and "movies" handle polling and movie list functions.
 
 ## Future Projects
