@@ -20,7 +20,7 @@ if os.path.exists(configFile):
     botConfig = storage.load(configFile)["config"]
     logging.debug("This is what botConfit holds %s", botConfig)
 else:
-    logging.crit("Unable to find config file, please create %s as described in the README", configFile)
+    logging.critical("Unable to find config file, please create %s as described in the README", configFile)
     sys.exit(1)
 
 for entry in required_configs:
