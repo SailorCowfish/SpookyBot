@@ -10,11 +10,6 @@ SpookyBot requires yaml and discord to function. Those can be installed with:
 
 You will need to use the botconfig.yaml file to store the bot token that was issued from discord as well as your guild ID. A template file "botconfig.yaml.dist" has been provided as a template for this purpose. Be sure to remove ".dist" before implementing this bot.
 
-```yaml
-bot_discord_token: [your token here]
-guild: [your guild ID here]
-```
-
 ## Development Notes
 References to "ID" should be in all caps.
 
