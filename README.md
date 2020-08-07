@@ -52,7 +52,7 @@ The Bot handles interactions with the file system.
 
 Contributors should submit a pull request for review. Pull requests that do not fit within the scope or adhere to requirements will be rejected. Pull requests are expected to be tested and fully functional before submission.
 
-## Future Feature Projects That SailorCowfish Will Do
+## Future Features That SailorCowfish Wants to Complete Herself
 IMDb synopsis listing
 
 "Volunteer" command to signify the user has or is willing to purchase a copy of a specific movie
