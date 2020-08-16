@@ -124,13 +124,14 @@ class MoviePoll(commands.Cog):
             response = "There is no active poll to close."
             await ctx.send(response)
 
-        currentPoll.close()
-        response = f'The winner is {currentPoll.winner}! "{currentPoll.winner}" will be removed from the movie list.'
+        response = currentPoll.close()
         await ctx.send(response)
 
         winnerIndex = movieList.getMovieID(currentPoll.winner)
         if winnerIndex is None:
-            response = f"Hey boss, I couldn't find the ID of the winning movie. Halp."
+            response = f"Hey boss, someone already deleted the winner from the movie list. Rude."
+            os.remove(pollFile)
+            storage.write(movieFile, movieList.movies)
             await ctx.send(response)
 
         else:
