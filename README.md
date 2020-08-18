@@ -60,3 +60,5 @@ IMDb synopsis listing
 Bug fixes for movie list
 
 Catches to prevent users from interferring in polls
+
+Event creation with dates and times. (Example: movie night, coffee chat, etc.)
